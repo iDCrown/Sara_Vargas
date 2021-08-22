@@ -1,0 +1,89 @@
+@mixin button($color, $right){
+  position: absolute;
+  width: 10em;
+  bottom: 52px;
+  right: $right;
+  z-index: 171;
+  background-color: $color;
+  text-align: center;
+  cursor: pointer;
+}
+
+.contact {
+  background-color: seagreen;
+  height: 50vh;
+}
+
+.contact-content {
+  height: inherit;
+  position: relative;
+}
+
+.conta {
+  height: inherit;
+  display: grid;
+  grid-template-columns: repeat(3, 50%);
+
+  :nth-last-child(2) {
+    background-color: lightcyan;
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: inherit;
+  }
+}
+
+
+.active {
+  animation: move ease-in 1s forwards;
+}
+.desactive {
+  animation: moves ease-in 1s forwards;
+}
+
+
+.contact1 {
+ background: chartreuse;
+}
+
+.contact2 {
+  background: rgb(255, 217, 0);
+}
+ 
+
+.true1 {
+  @include button(red, none);
+}
+
+.false1 {
+  @include button(rgb(0, 255, 149), none);
+}
+
+.true2 {
+  @include button(rgb(255, 0, 0), 0);
+}
+
+.false2 {
+  @include button(rgb(0, 255, 149), 0);
+}
+   
+
+  
+@keyframes move {
+  0% {
+    transform: translateX(100%);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moves {
+  0% {
+    transform: translateX(0%);
+  }
+  
+  100% {
+    transform: translateX(100%);
+  }
+}

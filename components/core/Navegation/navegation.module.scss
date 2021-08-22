@@ -1,0 +1,19 @@
+.nav {
+ background-color: red;
+ width: 100%;
+position: absolute;
+}
+.text {
+    color: rgb(255, 255, 255);
+    font-size: medium;
+}
+.li {
+    margin-right: 37px;
+    list-style: none;
+}
+.ul {
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    align-items: center;
+}
